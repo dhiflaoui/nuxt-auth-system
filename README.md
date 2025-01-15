@@ -1,75 +1,50 @@
-# Nuxt Minimal Starter
+# Building a Custom Authentication System with JWT in Nuxt 3
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Description
 
-## Setup
+This project is a Nuxt.js authentication system that utilizes JSON Web Tokens (JWT) for secure user authentication. It provides a framework for user management, including registration, login, and session handling.
 
-Make sure to install dependencies:
+## Installation
+
+To install the project, run the following command:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## Usage
 
-Start the development server on `http://localhost:3000`:
+To start the development server, use:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Database Setup
 
-Build the application for production:
+This project uses Prisma for database management. To set up the database, run the following commands:
 
-```bash
-# npm
-npm run build
+1. **Migrate the database**:
 
-# pnpm
-pnpm build
+   ```bash
+   npx prisma migrate dev --name init
+   ```
 
-# yarn
-yarn build
+2. **Generate the Prisma client**:
+   ```bash
+   npx prisma generate
+   ```
 
-# bun
-bun run build
-```
+## Key Dependencies
 
-Locally preview production build:
+- **jsonwebtoken**: For handling JWTs.
+- **@prisma/client**: For database interactions.
+- **bcryptjs**: For hashing passwords.
 
-```bash
-# npm
-npm run preview
+## Contributing
 
-# pnpm
-pnpm preview
+Contributions are welcome! Please create a pull request or open an issue for any enhancements or bug fixes.
 
-# yarn
-yarn preview
+## License
 
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This project is licensed under the MIT License.
